@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>hbd nae!</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div id="container">
+
+        <!-- An aside -->
+        <!-- This is for holding the 3D object -->
+        <div id="aSide">
+            <!-- 3D object -->
+            <!-- This inserts the 3D object inside the aside container -->
+            <model-viewer src="assets/cake.gltf" alt="Cake" auto-rotate camera-controls ar ios-src="assets/cake.gltf" poster="assets/loading.jpg">
+            </model-viewer>
+        </div>
+
+        <!-- Content container -->
+        <!-- This is for holding some brief description about the 3D object -->
+        <div id="content">
+            <p>happy birthday nae!</p>
+        </div>
+
+        <!-- Social media icons -->
+        <!-- This is for holding some company's social media icons and related links -->
+        <div id="icons">
+            <div id="iconsLogo">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Continuous confetti effect
+        document.addEventListener('DOMContentLoaded', (event) => {
+            function launchConfetti() {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+            setInterval(launchConfetti, 1000); // Launch confetti every second
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+/* The webpage overall styling */
+
+@font-face {
+    font-family: 'Humble Nostalgia';
+    src: url('../assets/HumbleNostalgiaRegular-w164P.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Humble Nostalgia', sans-serif;
+    box-sizing: border-box;
+    color: grey;
+}
+
+/*  This is for styling the main container that holds everything */
+
+#container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* This styles the descriptions of the 3D object */
+
+#content {
+    position: absolute;
+    top: 20px; /* Move text to the top */
+    width: 100%;
+    text-align: center;
+}
+
+/* This styles the paragraph in the 3D description*/
+
+#content p {
+    font-size: 20px;
+    color: black; /* Change text color to black */
+}
+
+/* This styles the social media icons*/
+
+#icons {
+    height: 500px;
+    width: 140px;
+    background: none;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 250px);
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(2px 2px 2px grey);
+}
+
+/* This styles the social media icons logos*/
+
+#icons #iconsLogo {
+    height: 300px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* This styles the social media icons logos images*/
+
+#icons #iconsLogo i {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    margin: 10px;
+    color: grey;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+/* This styles the aside container */
+
+#aSide {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This styles the 3D object inserted in the aside container */
+
+#aSide model-viewer {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
